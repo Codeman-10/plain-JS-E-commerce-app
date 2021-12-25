@@ -8,6 +8,13 @@
   align-items: center;
 }
 
+p{
+  margin: 0;
+}
+a{
+  padding: 20px;
+  color: black;
+}
 .header_left {
   display: flex;
   align-items: center;
@@ -20,8 +27,8 @@
   justify-content: space-between;
 }
 
-.header_right > p,
-.header_left > p {
+.header_right  a,.header_right>p
+.header_left a {
   margin: 20px;
 }
 

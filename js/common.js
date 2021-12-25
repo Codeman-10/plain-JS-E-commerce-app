@@ -1,3 +1,6 @@
+const userObject=JSON.parse(sessionStorage.getItem("userObj"));
+const cart = JSON.parse(sessionStorage.getItem("cart"));
+
 const footerData=`
     <div class="container">
       <div class="footer_container_1">
@@ -45,12 +48,13 @@ const footerData=`
   const headerData=`
   <div class="header_left">
     <img src="icons/shopping-bag.png" alt="myicon" class="my_icons" />
-    <p class="header_title">Shopping Mart</p>
+    <a href="index.html" class="header_title">Shopping Mart</a>
+    <a href="#">Products</a>
   </div>
   <div class="header_right">
-    <p>Hello Customer</p>
-    <p>My Orders</p>
-    <a href = "cart.html">My Cart<i class="fas fa-cart-plus"></i></a>
+    <p>Hello ${userObject?userObject.user:"Customer"}</p>
+    <a href="#">Signout</a>
+    <a href = "cart.html">My Cart<i class="fas fa-cart-plus">${cart?cart.length:''}</i></a>
   </div>
 `;
 
