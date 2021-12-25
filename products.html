@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShoppingMart</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/2781c6a288.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/style.css" />
+</head>
+<style>
+    .product_feed {
+        min-height: 60vh;
+    }
+.section_header{
+    font-size: larger;
+    font-weight: bolder;
+    text-align: left;
+    text-transform: uppercase;
+    margin:10px 30px;
+    color: aliceblue;
+    background-color: #808080;
+    padding-left: 10px;
+}
+    section {
+        display: grid;
+        grid-auto-flow: row;
+        margin: 20px;
+    }
+
+    .carousel-inner {
+        width: 100%;
+        max-height: 550px !important;
+    }
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        background-color: #f2eee8;
+        margin: 10px;
+        padding: 10px;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .product-card-img {
+        height: 200px;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .banner-img {
+        width: 100%;
+    }
+
+    @media (min-width: 1025px) {
+        section {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        section {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    @media (min-width: 501px) and (max-width: 767px) {
+        section {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (min-width: 10px) and (max-width: 500px) {
+        section {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            font-size: xx-small;
+        }
+    }
+</style>
+
+<body>
+    <div id="header"></div>
+
+    <div class="product_feed">
+        <p class="section_header">electronics</p>
+        <section id="section_a"></section>
+        <p class="section_header">jewelery</p>
+
+        <section id="section_b"></section>
+        <p class="section_header">men's clothing</p>
+
+        <section id="section_c"></section>
+        <p class="section_header">women's clothing</p>
+
+        <section id="section_d"></section>
+    </div>
+
+    <div id="footer"></div>
+    <script src="./js/common.js"></script>
+    <script src="./js/product.js"></script>
+</body>
+
+</html>

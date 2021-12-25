@@ -49,11 +49,11 @@ const footerData=`
   <div class="header_left">
     <img src="icons/shopping-bag.png" alt="myicon" class="my_icons" />
     <a href="index.html" class="header_title">Shopping Mart</a>
-    <a href="#">Products</a>
+    <a href="Products.html">Products</a>
   </div>
   <div class="header_right">
     <p>Hello ${userObject?userObject.user:"Customer"}</p>
-    <a href="#">Signout</a>
+    <a href="login.html">Sign Up</a>
     <a href = "cart.html">My Cart<i class="fas fa-cart-plus">${cart?cart.length:''}</i></a>
   </div>
 `;

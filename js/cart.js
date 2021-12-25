@@ -3,14 +3,14 @@ const currentCart = JSON.parse(sessionStorage.getItem("cart"));
 const product_table = document.getElementById("product_table");
 const rate_table = document.getElementById("rate_table");
 
-
 let price = 0;
 let resultString = `<tr>
 <th>Product</th>
 <th>Quantity</th>
 <th>Subtotal</th>
 </tr>`;
-currentCart.forEach(item => {
+
+currentCart?.forEach(item => {
 
   const currentItem = data.filter(obj => obj.id == item.id)[0]
   const row = `<tr><td>
@@ -54,10 +54,20 @@ const row = `<tr>
 rate_table.innerHTML = row;
 
 removeItem = (id) => {
-  const updatedCart=currentCart.filter(item=> item.id!=id)
+if(confirm("Do you want to remove that item")){
+  const updatedCart = currentCart.filter(item => item.id != id)
   sessionStorage.setItem("cart", JSON.stringify(updatedCart))
   alert("removed")
+}
+}
 
+onCheckout = () => {
+  if (userObject) {
+    window.location = "success.html"
+  }
+  else {
+    alert("Please login to Checkout")
+  }
 }
 
 

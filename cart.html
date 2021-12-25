@@ -77,6 +77,28 @@
     th:last-child {
       text-align: right;
     }
+    .page_header{
+      text-align: left;
+      text-transform: uppercase;
+    }
+    .checkout_btn {
+  display: block;
+  width: 300px;
+  margin-left: 1510px;
+
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.checkout_btn:hover {
+  background-color: #ddd;
+  color: black;
+}
   </style>
   <body>
 
@@ -85,6 +107,7 @@
     </div>
     <div class="cart_container">
       <div class="small_container cart_page">
+        <h2 class="page_header">My cart</h2>
         <table id="product_table">
         
         </table>
@@ -95,7 +118,11 @@
           </table>
         </div>
       </div>
+
+      <button class="checkout_btn" onClick="onCheckout()"> checkout</button>
+
     </div>
+
     <div id="footer">
 
     </div>
