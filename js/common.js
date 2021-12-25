@@ -16,7 +16,7 @@ const footerData=`
       </div>
       <div class="footer_container_2">
         <img  src="icons/shopping-bag.png" alt="" />
-        <p>
+        <p class="header_title">
           ShoppingMart
         </p>
       </div>
@@ -49,12 +49,12 @@ const footerData=`
   <div class="header_left">
     <img src="icons/shopping-bag.png" alt="myicon" class="my_icons" />
     <a href="index.html" class="header_title">Shopping Mart</a>
-    <a href="Products.html">Products</a>
+    <a href="Products.html" class="header_item">Products</a>
   </div>
   <div class="header_right">
-    <p>Hello ${userObject?userObject.user:"Customer"}</p>
-    <a href="login.html">Sign Up</a>
-    <a href = "cart.html">My Cart<i class="fas fa-cart-plus">${cart?cart.length:''}</i></a>
+    <p class="header_item">Hello ${userObject?userObject.user:"Customer"}</p>
+    <a class="header_item" href="login.html">Sign Up</a>
+    <a class="header_item" href = "cart.html">My Cart<i class="fas fa-cart-plus">${cart?cart.length:''}</i></a>
   </div>
 `;
 

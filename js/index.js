@@ -18,12 +18,12 @@ displaycarddata = (data, element) => {
     data
         .forEach(item => {
             const card = `
-            <div class="product-card">
+            <div class="product-card" onclick="redirect(${item.id})" >
         <img class="product-card-img" src="${item.image}" alt="Card image cap">
         <div class="product-card-body">
           <h5 class="product-card-title">${item.title}</h5>
-          <p class="product-card-text">${item.description.substring(0, 100)}</p>
-          <a href="product_description_page.html?id=${item.id}" class="product-card-tag">View</a>
+          <p class="product-card-text">${item.description.substring(0, 100)}...</p>
+       
         </div></div>`
             resultString += card;
         });
@@ -31,7 +31,10 @@ displaycarddata = (data, element) => {
 
 
 }
+function redirect(id) {
 
+    window.location = "product_description_page.html?id=" + id;
+}
 showdata = characters => {
 
     displaycarddata(characters.slice(0, 8), "upper")
@@ -40,3 +43,11 @@ showdata = characters => {
 
 
 }
+
+
+// <a href="#"> <div class="product-card" >
+// <img class="product-card-img" src="${item.image}" alt="Card image cap">
+// <div class="product-card-body">
+//   <h5 class="product-card-title">${item.title}</h5>
+//   <p class="product-card-text">${item.description.substring(0, 100)}...</p>
+// </div></div></a>`

@@ -18,83 +18,9 @@
   <title>Shopping Mart</title>
   </script>
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/index.css">
   <script src="js/index.js"></script>
 
-  <style>
-    section {
-      display: grid;
-      grid-auto-flow: row;
-      margin: 20px;
-    }
-
-    .carousel-inner {
-      width: 100%;
-      max-height: 550px !important;
-    }
-
-    .product-card {
-      display: flex;
-      flex-direction: column;
-      background-color: #f2eee8;
-      margin: 10px;
-      padding: 10px;
-      overflow: hidden;
-      text-align: center;
-    }
-
-    .product-card-img {
-      height: 200px;
-      width: 100%;
-      object-fit: contain;
-    }
-
-    .banner-img {
-      width: 100%;
-    }
-
-    @media (min-width: 1025px) {
-      section {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-      }
-    }
-
-    @media (min-width: 768px) and (max-width: 1024px) {
-      section {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-
-    @media (min-width: 501px) and (max-width: 767px) {
-      section {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (min-width: 10px) and (max-width: 500px) {
-      section {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        font-size: xx-small;
-      }
-    }
-    /* brands */
-
-    .brands {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-    }
-
-    .logo_holder>img {
-      filter: grayscale(100%);
-      cursor: pointer;
-    }
-
-    .logo_holder>img:hover {
-      filter: grayscale(0%);
-
-    }
-  </style>
 </head>
 
 <body>
@@ -113,8 +39,6 @@
       <div class="carousel-item active">
         <img class="d-block w-100" src="images/carousel-image-1.jfif" alt="First slide" />
         <div class="carousel-caption d-none d-md-block">
-          <h5>...</h5>
-          <p>...</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -137,10 +61,12 @@
     </a>
   </div>
   <div class="content_container">
+    <p class="section_header">Trending</p>
     <section id="upper">
       <h1>LOADING...........</h1>
     </section>
     <img src="images/banner-image-2.jpg" alt="" class="banner-img" />
+    <p class="section_header">Latest Arrivals</p>
     <section id="lower"></section>
   </div>
   <div class="brands">

@@ -20,16 +20,14 @@ a{
   align-items: center;
   justify-content: space-evenly;
 }
-
 .header_right {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.header_right  a,.header_right>p
-.header_left a {
-  margin: 20px;
+.header_item{
+font-weight: 600;
+color: #fff;
 }
 
 .header_left > img {
@@ -38,6 +36,10 @@ a{
 
 .header_title {
   margin-left: 0px !important;
+  font-weight: bolder;
+  text-transform: capitalize;
+  font-size: larger;
+  color: rgb(212, 214, 69);
 }
 
 /* footer */
