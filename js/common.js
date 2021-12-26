@@ -44,7 +44,6 @@ const footerData=`
     <p class="copyright">Copyright 2022 - Shopping Mart</p>
   `
 
-
   const headerData=`
   <div class="header_left">
     <img src="icons/shopping-bag.png" alt="myicon" class="my_icons" />
@@ -53,7 +52,7 @@ const footerData=`
   </div>
   <div class="header_right">
     <p class="header_item">Hello ${userObject?userObject.user:"Customer"}</p>
-    <a class="header_item" href="login.html">Sign Up</a>
+    <a class="header_item" href=login.html?${userObject?"user=signOut":"user=SignUp"}> ${userObject?"signOut":"Sign Up"}</a>
     <a class="header_item" href = "cart.html">My Cart<i class="fas fa-cart-plus">${cart?cart.length:''}</i></a>
   </div>
 `;

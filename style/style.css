@@ -8,10 +8,10 @@
   align-items: center;
 }
 
-p{
+p {
   margin: 0;
 }
-a{
+a {
   padding: 20px;
   color: black;
 }
@@ -25,9 +25,9 @@ a{
   align-items: center;
   justify-content: space-between;
 }
-.header_item{
-font-weight: 600;
-color: #fff;
+.header_item {
+  font-weight: 600;
+  color: #fff;
 }
 
 .header_left > img {
@@ -49,7 +49,6 @@ color: #fff;
   font-size: 14px;
   text-align: center;
   padding: 60px 0 20px;
-  
 }
 
 #footer .container {
@@ -84,8 +83,7 @@ body {
 img {
   object-fit: contain;
 }
-body{
+body {
   padding: 0px;
   margin: 0px;
-
 }

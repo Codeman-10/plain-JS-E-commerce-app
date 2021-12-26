@@ -1,5 +1,13 @@
 const userArray = JSON.parse(localStorage.getItem("userArray"));
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const user = urlParams.get('user')
 
+
+//to signout the current logged user
+if (user) {
+    sessionStorage.removeItem("userObj")
+}
 
 loginUser = (event) => {
     event.preventDefault();
