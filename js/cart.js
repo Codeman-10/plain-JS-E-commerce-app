@@ -74,7 +74,12 @@ removeItem = (id, title) => {
 // to Checkout
 onCheckout = () => {
   if (userObject) {
+    if(currentCart){
     window.location = "success.html"
+    }
+    else{
+      alert("Please add anything int the cart before proceeding to checkout!!!")
+    }
   }
   else {
     alert("Please login to Checkout")
