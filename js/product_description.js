@@ -1,7 +1,10 @@
 const data = JSON.parse(sessionStorage.getItem("data"));
+
+// get the id of the product from URL
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const product_id = urlParams.get('id');
+
 const product = data.filter(val => val.id == product_id)[0];
 const product_brand = document.getElementById("product_brand");
 const product_price = document.getElementById("product_price");
