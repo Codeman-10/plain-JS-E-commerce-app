@@ -43,12 +43,11 @@ const footerData=`
     <hr />
     <p class="copyright">Copyright 2022 - Shopping Mart</p>
   `
-
   const headerData=`
   <div class="header_left">
     <img src="icons/shopping-bag.png" alt="myicon" class="my_icons" />
     <a href="index.html" class="header_title">Shopping Mart</a>
-    <a href="Products.html" class="header_item">Products</a>
+    <a href="../products/products.html" class="header_item">Products</a>
   </div>
   <div class="header_right">
     <p class="header_item">Hello ${userObject?userObject.user:"Customer"}</p>

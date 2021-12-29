@@ -5,31 +5,30 @@ getData = (category, element) => {
     fetch(baseUrl)
         .then(res => res.json())
         .then(json => {
-            displaycarddata(json, element)
+            displayCardData(json, element)
 
         })
 }
 
-displaycarddata = (data, element) => {
+displayCardData = (data, element) => {
 
     const section = document.getElementById(element)
     let resultString = "";
     data
         .forEach(item => {
-            const card = `
-            <div class="product-card" onclick="redirect(${item.id})" >
-        <img class="product-card-img" src="${item.image}" alt="Card image cap">
-        <div class="product-card-body">
-          <h5 class="product-card-title">${item.title}</h5>
-          <p class="product-card-text">${item.description.substring(0, 100)}...</p>
-       
-        </div></div>`
+            const card = `<div class="product-card" onclick="redirect(${item.id})" >
+            <img class="product-card-img" src="${item.image}" alt="Card image cap">
+            <div class="product-card-body">
+               <h5 class="product-card-title">${item.title}</h5>
+               <p class="product-card-text">${item.description.substring(0, 100)}...</p>
+            </div>
+         </div>`
             resultString += card;
         });
     section.innerHTML = resultString
 }
 
-redirect = (id) => window.location = "product_description_page.html?id=" + id;
+redirect = (id) => window.location = `product_description_page.html?id=${id}`;
 
 // to call the api and get the the products based on category
 getData("electronics", "section_a")
